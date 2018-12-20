@@ -1,0 +1,116 @@
+Author: Yash Hemant Jain
+Net Id: yxj180004
+CS 6322.001 Information Retrieval
+
+Resources Used: (Stemming.py) PorterStemmer immplementation by Vivake Gupta, url: https://tartarus.org/martin/PorterStemmer/python.txt
+Files: Tokenize.py, Stemming.py, Cranfield directory
+
+Program Description:
+
+1. How long the program took to acquire the text characteristics: 0:00:01.251448
+
+2. How the program handles:
+A. Upper and lower case words (e.g. "People", "people", "Apple", "apple"):
+	The program converts every word in the Cranfield text collection into the lower case so that unique tokens and stems can be extracted.
+B. Words with dashes (e.g. "1996-97", "middle-class", "30-year", "tean-ager")
+	The program eliminates numbers and special characters and split words with dashes into seperate tokens (e.g. "middle-class" as "middle","class")
+C. Possessives (e.g. "sheriff's", "university's")
+	The program converts possessives into single token (e.g. "sheriff's" as "sheriffs")
+D. Acronyms (e.g., "U.S.", "U.N.")
+	The program converts acronyms into single token (e.g. "U.S.A." as "usa")
+	
+3. Briefly discuss your major algorithms and data structures.
+
+	i. Libraries used
+		a. glob: The glob module finds all the pathnames matching a specified pattern according to the rules used by the Unix shell
+		b. re: The re module provides regular expression matching operations similar to those found in Perl. Both patterns and strings to be searched can be Unicode strings as well as 8-bit strings.
+		c. sys: The sys module enables the program to accept the directory path as the command line argument.
+		d. collections, Counter: Counter module in collection helps to identify the tokens which have occured once. The collections module also helps to list the most common terms.
+		e. datetime: to capture the runtime of the program.
+		
+	ii. Program flow and data structures
+		The text collection is tokenized using split function.
+		The program eliminates the numbers and special characters and include abbreviations as single tokens.
+		The program "Tokenize.py" imports the PorterStemmer implementation defined in "Stemming.py" for stemming the tokens.
+		The program uses following data structures in the code:
+		lists: to list the tokens and stems
+		set: to include the set of unique tokens and stems
+		Counter: to include tokens and stems with frequency 1
+		
+Problem 1: Tokenization
+
+1. The number of tokens in the Cranfield text collection:	230772
+2. The number of unique words in the Cranfield text collection:	8903
+3. The number of words that occur only once in the Cranfield text collection: 3395
+4. The 30 most frequent words in the Cranfield text collection – list them and their respective frequency information:
+('the', 19449)
+('of', 12714)
+('and', 6672)
+('a', 5993)
+('in', 4650)
+('to', 4560)
+('is', 4113)
+('for', 3492)
+('are', 2429)
+('with', 2263)
+('on', 1944)
+('flow', 1848)
+('at', 1834)
+('by', 1756)
+('that', 1570)
+('an', 1388)
+('be', 1272)
+('pressure', 1207)
+('boundary', 1156)
+('from', 1116)
+('as', 1114)
+('this', 1081)
+('layer', 1002)
+('which', 975)
+('number', 973)
+('results', 885)
+('it', 856)
+('mach', 823)
+('theory', 788)
+('shock', 712)
+5. The average number of word tokens per document:	164
+
+
+Problem 2: Stemming
+
+1. The number of distinct stems in the Cranfield text collection:	6118
+2. The number of stems that occur only once in the Cranfield text collection:	2287
+3. The 30 most frequent stems in the Cranfield text collection – list them and their respective frequency information:
+('the', 19449)
+('of', 12714)
+('and', 6672)
+('a', 5993)
+('in', 4650)
+('to', 4560)
+('is', 4113)
+('for', 3492)
+('ar', 2458)
+('with', 2263)
+('on', 2262)
+('flow', 2079)
+('at', 1834)
+('by', 1756)
+('that', 1570)
+('an', 1388)
+('pressur', 1382)
+('be', 1369)
+('number', 1347)
+('boundari', 1185)
+('layer', 1134)
+('from', 1116)
+('as', 1114)
+('result', 1087)
+('thi', 1081)
+('it', 1043)
+('effect', 996)
+('which', 975)
+('method', 886)
+('theori', 881)
+4. The average number of word stems per document:	4
+
+

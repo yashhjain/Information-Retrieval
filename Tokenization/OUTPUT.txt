@@ -1,0 +1,90 @@
+Author: Yash Hemant Jain
+Net Id: yxj180004
+CS 6322.001 Information Retrieval
+
+OUTPUT:
+
+##----------------TOKENIZATION---------------------##
+
+Number of tokens: 230772 
+
+Number of unique words: 8903 
+
+Number of words that occured only once: 3395 
+
+30 most frequent words in the Cranfield text collection (word,frequency):
+('the', 19449)
+('of', 12714)
+('and', 6672)
+('a', 5993)
+('in', 4650)
+('to', 4560)
+('is', 4113)
+('for', 3492)
+('are', 2429)
+('with', 2263)
+('on', 1944)
+('flow', 1848)
+('at', 1834)
+('by', 1756)
+('that', 1570)
+('an', 1388)
+('be', 1272)
+('pressure', 1207)
+('boundary', 1156)
+('from', 1116)
+('as', 1114)
+('this', 1081)
+('layer', 1002)
+('which', 975)
+('number', 973)
+('results', 885)
+('it', 856)
+('mach', 823)
+('theory', 788)
+('shock', 712)
+
+Average number of word tokens per document: 165 
+
+Time the program took to acquire the text characteristics: 0:00:01.251448 
+
+
+##----------------STEMMING---------------------##
+
+Number of distinct stems in the Cranfield text collection: 6118 
+
+Number of stems that occur only once in the Cranfield text collection: 2287 
+
+30 most frequent stems in the Cranfield text collection (stem,frequency):
+('the', 19449)
+('of', 12714)
+('and', 6672)
+('a', 5993)
+('in', 4650)
+('to', 4560)
+('is', 4113)
+('for', 3492)
+('ar', 2458)
+('with', 2263)
+('on', 2262)
+('flow', 2079)
+('at', 1834)
+('by', 1756)
+('that', 1570)
+('an', 1388)
+('pressur', 1382)
+('be', 1369)
+('number', 1347)
+('boundari', 1185)
+('layer', 1134)
+('from', 1116)
+('as', 1114)
+('result', 1087)
+('thi', 1081)
+('it', 1043)
+('effect', 996)
+('which', 975)
+('method', 886)
+('theori', 881)
+
+Average number of word stems per document: 4 
